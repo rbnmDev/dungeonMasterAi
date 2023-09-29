@@ -1,0 +1,19 @@
+version: '3'
+services:
+  frontend:
+    build: ./frontend
+    container_name: gpt-front
+    ports:
+      - "3002:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+  backend:
+    build: ./backend
+    container_name: gpt-back
+    restart: unless-stopped
+    ports:
+      - "3003:3000"
+    volumes:
+      - ./backend:/app
+      - /app/node_modules

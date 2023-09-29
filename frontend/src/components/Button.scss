@@ -1,0 +1,21 @@
+.btn {
+    background-color:green;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    margin: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    &.danger{
+        background-color: red;
+    }
+}
